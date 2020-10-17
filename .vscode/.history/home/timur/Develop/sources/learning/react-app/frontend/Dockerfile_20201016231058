@@ -1,0 +1,11 @@
+FROM node:alpine
+# as builder i snot needed for AWS
+
+WORKDIR '/app'
+
+COPY package.json
+
+RUN npm install
+
+COPY . .
+
